@@ -20,10 +20,10 @@ build() {
         --no-interaction \
         --env=s \
         --dir=$build_dir \
-        --sql_gen=1 \
+        --sql_gen=2 \
         --project_id=$project_id \
         --db_region=europe-west1 \
-        --db_instance=wp \
+        --db_instance=$site_name \
         --db_name=$db_name \
         --db_user=root \
         --db_password=$db_password \
