@@ -37,6 +37,8 @@ build() {
         unzip -oq -d $build_dir/wordpress/wp-content/plugins $plugin
         rm -f $plugin
     done
+
+	unzip -q rise-1.200.27.zip -d build/wordpress/wp-content/themes
 }
 
 deploy() {
