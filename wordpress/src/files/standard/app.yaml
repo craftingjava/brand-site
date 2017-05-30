@@ -46,6 +46,7 @@ handlers:
 
 - url: /(.+)?/?
   script: wordpress/index.php
+  secure: always
 
 skip_files:
 - ^(.*/)?\.zip$
