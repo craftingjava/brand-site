@@ -5,3 +5,4 @@ https://downloads.wordpress.org/plugin/social-pug.zip
 https://downloads.wordpress.org/plugin/wordpress-seo.4.6.zip
 https://downloads.wordpress.org/plugin/email-marketing.zip
 https://downloads.wordpress.org/plugin/mailgun.1.5.8.2.zip
+https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.0.0.1.zip
