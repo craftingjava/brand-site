@@ -1,5 +1,5 @@
 https://downloads.wordpress.org/plugin/clicky.1.6.zip
-https://downloads.wordpress.org/plugin/contact-form-7.4.7.zip
+https://downloads.wordpress.org/plugin/contact-form-7.4.9.zip
 https://downloads.wordpress.org/plugin/disqus-comment-system.2.86.zip
 https://downloads.wordpress.org/plugin/social-pug.zip
 https://downloads.wordpress.org/plugin/email-marketing.zip
