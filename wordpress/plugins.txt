@@ -7,3 +7,4 @@ https://downloads.wordpress.org/plugin/mailgun.1.5.8.2.zip
 https://downloads.wordpress.org/plugin/ga-google-analytics.20170324.zip
 https://downloads.wordpress.org/plugin/wp-polls.2.73.7.zip
 https://downloads.wordpress.org/plugin/google-sitemap-generator.4.0.9.zip
+https://downloads.wordpress.org/plugin/wordpress-seo.6.0.zip
