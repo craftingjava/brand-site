@@ -1,17 +1,28 @@
 #!/bin/bash
 
-if [ $# -lt 4 ]; then
-    echo "Usage: ${0} <site_name> <project_id> <db_name> <db_password>"
+if [ $# -lt 1 ]; then
+    echo "Usage: ${0} <profile_name>"
     exit 1
 fi
 
-site_name=$1
-project_id=$2
-db_name=$3
-db_password=$4
+profile_name=$1
+profile_file=".profile-${profile_name}"
+
+if [ ! -f $profile_file ]; then
+  echo "Profile descriptor ${profile_file} doesn't exist."
+  exit 1
+fi
+
+profile_data=$(egrep -v "^#|^$" ${profile_file} | head -1)
+
+project_id=$(echo ${profile_data} | cut -d':' -f1)
+db_region=$(echo ${profile_data} | cut -d':' -f2)
+db_instance=$(echo ${profile_data} | cut -d':' -f3)
+db_name=$(echo ${profile_data} | cut -d':' -f4)
+db_password=$(echo ${profile_data} | cut -d':' -f5)
 
 build_dir="build"
-local_db="wp_${site_name}"
+local_db="wp_${db_instance}"
 
 build() {
     mkdir -p $build_dir
@@ -22,8 +33,8 @@ build() {
         --dir=$build_dir \
         --sql_gen=2 \
         --project_id=$project_id \
-        --db_region=europe-west1 \
-        --db_instance=$site_name \
+        --db_region=${db_region} \
+        --db_instance=$db_instance \
         --db_name=$db_name \
         --db_user=root \
         --db_password=$db_password \
