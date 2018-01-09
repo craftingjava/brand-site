@@ -49,7 +49,8 @@ build() {
         rm -f ${plugin}
     done
 
-	unzip -q rise-1.200.27.zip -d build/wordpress/wp-content/themes
+	unzip -q thrivethemes-rise-1.200.27.zip -d build/wordpress/wp-content/themes
+  unzip -q thrivethemes-focusblog-1.300.06.zip -d build/wordpress/wp-content/themes
 }
 
 deploy() {
