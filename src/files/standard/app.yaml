@@ -1,6 +1,8 @@
 runtime: php55
 api_version: 1
 
+default_expiration: "30d"
+
 handlers:
 - url: /(.*\.(htm|html|css|js))
   static_files: wordpress/\1
@@ -25,28 +27,35 @@ handlers:
 - url: /wp-admin/(.+)
   script: wordpress/wp-admin/\1
   secure: always
+  expiration: "0m"
 
 - url: /wp-admin/
   script: wordpress/wp-admin/index.php
   secure: always
+  expiration: "0m"
 
 - url: /wp-login.php
   script: wordpress/wp-login.php
   secure: always
+  expiration: "0m"
 
 - url: /wp-cron.php
   script: wordpress/wp-cron.php
   login: admin
+  expiration: "0m"
 
 - url: /xmlrpc.php
   script: wordpress/xmlrpc.php
+  expiration: "0m"
 
 - url: /wp-(.+).php
   script: wordpress/wp-\1.php
+  expiration: "0m"
 
 - url: /(.+)?/?
   script: wordpress/index.php
   secure: always
+  expiration: "7d"
 
 skip_files:
 - ^(.*/)?\.zip$
