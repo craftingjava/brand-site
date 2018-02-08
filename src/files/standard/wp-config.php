@@ -26,7 +26,7 @@ if (isset($_SERVER['SERVER_SOFTWARE'])
 define('WP_CACHE', $onGae);
 $batcache = [
     'seconds' => 0,
-    'max_age' => 30 * 60, // 30 minutes
+    'max_age' => 24 * 60 * 60, // 1 day
     'debug' => false
 ];
 
